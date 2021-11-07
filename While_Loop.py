@@ -1,54 +1,63 @@
-sayilar = [1, 3, 5, 7, 9, 12, 19, 21]
+numbers = [1, 3, 5, 7, 9, 12, 19, 21]
 
-# Soru-1 Listesini While İle Ekrana Yazdırınız.
+# Problem 1
+# Print the "numbers" List with "While".
 
 n = 0
-while n < len(sayilar):
-    print(sayilar[n])
+while n < len(numbers):
+    print(numbers[n])
     n += 1
+print("------------------------------")
 
-# Soru-2 Başlangıç Ve Bitiş Değerlerini Kullanıcıdan Alıp Aradaki Tüm Tek Sayıları Ekrana Yazdırınız.
+# Problem 2
+# Get the start and end values from the user and print all the odd numbers on the screen.
 
-ilk = int(input("Baslangic Degerini Giriniz:"))
-son = int(input("Bitis Degerini Giriniz:"))
+first = int(input("Enter the Initial Value: "))
+end = int(input("Enter the End Value: "))
 
-while ilk <= son:
-    if ilk % 2 == 1:
-        print(ilk)
-    ilk += 1
-print("Bitti.")
+while first <= end:
+    if first % 2 == 1:
+        print(first)
+    first += 1
+print("Finished.")
+print("------------------------------")
 
-# Soru-3 1-100 Arasındaki Sayıları Azalan Şekilde Yazdırınız.
+# Problem 3
+# Print the numbers 1-100 in descending order.
 
-sayi = 100
-while sayi > 0:
-    print(sayi)
-    sayi -= 1
+number = 100
+while number > 0:
+    print(number)
+    number -= 1
+print("------------------------------")
 
-# Soru-4 Kullanıcıdan Alacağınız 5 Sayıyı Ekranda Sıralı Bir Şekilde Yazdırınız.
+# Problem 4
+# Print the 5 numbers you will receive from the user on the screen in a sequential manner.
 
-liste = []
+sequence = []
 i = 0
 while i < 5:
-    liste.append(int(input("Bir Sayi Giriniz:")))
+    sequence.append(int(input("Enter A Number: ")))
     i += 1
-print(*sorted(liste))
+print(*sorted(sequence))
+print("------------------------------")
 
 
-# Soru-5 Kullanıcıdan Alacağınız Ürün Bilgilerini Ürünler Listesi İçerisinde Saklayınız.
-# **Ürün Sayısını Kullanıcıya Sorun.
-# **Dictionary Listesi (name, price) Şeklinde Olsun.
-# **Ürün Ekleme İşlemi Bittiğinde Ürünleri Ekranda While İle Listeleyiniz.
+# Problem 5
+# Keep the Product Information You Will Get from the User in the Products List.
+# **Ask User for Product Number.
+# **As Dictionary List (name, price).
+# **When Adding a Product is Finished, List the Products with "While" on the Screen.
 
-urunler = []
+products = []
 
-adet = int(input("Urun Sayisini Giriniz:"))
+amount = int(input("Enter Number of Products:"))
 
-while adet > 0:
-    name = input("Urun Adini Giriniz:")
-    price = input("Urunun Fiyatini Giriniz:")
-    urunler.append({'name' : name, 'price' : price})
-    adet -= 1
+while amount > 0:
+    name = input("Enter the Product Name:")
+    price = input("Enter the Price of the Product:")
+    products.append({'name' : name, 'price' : price})
+    amount -= 1
 
-for urun in urunler:
-    print(urun)
+for product in products:
+    print(product)

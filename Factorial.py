@@ -1,24 +1,24 @@
 print("""
 *******************
-Faktoriyel Bulma Programi
+Factorial Finder Program
 
 
-Cikmak Icin 'quit' yazın...
+Type 'quit' to quit...
 *******************
 """)
 
 while True:
-    sayi = input("Bir sayi giriniz:")
-    if sayi == 'quit':
-        print("Gorusmek uzere")
+    number = input("Enter A Number: ")
+    if number == 'quit':
+        print("See You.")
 
     else:
-        sayi = int(sayi)
-        if sayi >= 0:
-            faktoriyel = 1
-            for i in range(2, sayi + 1):
-                faktoriyel *= i
-            print(f"{sayi}! = {faktoriyel}")
-            print("Karakter Sayisi:", len(str(faktoriyel)))
+        number = int(number)
+        if number >= 0:
+            factorial = 1
+            for i in range(2, number + 1):
+                factorial *= i
+            print(f"{number}! = {factorial}")
+            print("Number of Characters: ", len(str(factorial)))
         else:
-            print("Lutfen Pozitif Bir Sayi Giriniz!!!")
+            print("Please Enter A Positive Number!!!")

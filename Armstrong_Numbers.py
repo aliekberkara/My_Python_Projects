@@ -1,27 +1,27 @@
 """
 Problem 2
 
-Kullanıcıdan aldığınız bir sayının "Armstrong" sayısı olup olmadığını bulmaya çalışın.
-Örnek olarak, Bir sayı eğer 4 basamaklı ise ve oluşturan rakamlardan herbirinin 4. kuvvetinin toplamı
-( 3 basamaklı sayılar için 3.kuvveti ) o sayıya eşitse bu sayıya "Armstrong" sayısı denir.
+Try to find out if a number you received from the user is the "Armstrong" number.
+For example, if a number is 4 digits and the sum of each of its digits to the power 4
+If (3rd power for 3-digit numbers) is equal to that number, this number is called "Armstrong" number.
 
-Örnek olarak : 1634 = 1^4 + 6^4 + 3^4 + 4^4
+For example: 1634 = 1^4 + 6^4 + 3^4 + 4^4
 """
 
 while True:
-    sayi = int(input("Bir Sayi Giriniz:"))
-    b_sayisi = len(str(sayi))
-    b_sayi = sayi
-    toplam = 0
+    number = int(input("Enter A Number: "))
+    digit_number = len(str(number))
+    digits = number
+    total = 0
 
-    while b_sayi > 0:
-        basamak = b_sayi % 10
-        b_sayi = (b_sayi - basamak) / 10
-        toplam += basamak ** b_sayisi
+    while digits > 0:
+        digit = digits % 10
+        digits = (digits - digit) / 10
+        total += digit ** digit_number
 
-    if toplam == sayi:
-        print(f"{sayi} Sayisi Armstrong Sayisidir...")
+    if total == number:
+        print(f"Number {number} Is A Armstrong Number...")
         break
     else:
-        print(f"{sayi} Sayisi Armstrong Sayisi Degildir...")
+        print(f"Number {number} Is Not A Armstrong Number...")
         break

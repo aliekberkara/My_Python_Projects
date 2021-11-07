@@ -1,21 +1,21 @@
 """
-Girilen Bir Sayının Asal Olup Olmadığını Bulun.
-** Asal Sayı 1 Ve Kendisi Hariç Tam Böleni Olmayan Sayılara Denir.
+Find if a given number is prime or not.
+** Prime Numbers Are Numbers That Have No Exact Divisors Except 1 And Itself.
 """
 
-sayi = int(input("Bir Sayi Giriniz:"))
-asal = 0
-if sayi == 0 or sayi == 1:
-    print(f"{sayi} Asal Sayi Degildir.")
+number = int(input("Enter A Number: "))
+prime = 0
+if number == 0 or number == 1:
+    print(f"{number} Is Not A Prime Number.")
 
-elif sayi == 2:
-    print(f"{sayi} Asal Sayidir.")
+elif number == 2:
+    print(f"{number} Is A Prime Number.")
 
-elif sayi > 2 and sayi % 2 == 1:
-    for i in range(2, (sayi // 2) + 1):
-        if sayi % i == 0:
-            asal += 1
-    if asal == 0:
-        print(f"{sayi} Asal Sayidir.")
+elif number > 2 and number % 2 == 1:
+    for i in range(2, (number // 2) + 1):
+        if number % i == 0:
+            prime += 1
+    if prime == 0:
+        print(f"{number} Is A Prime Number.")
     else:
-        print(f"{sayi} Asal Sayi Degildir.")
+        print(f"{number} Is Not A Prime Number.")

@@ -1,7 +1,8 @@
 """
 Problem 6
-List comprehension kullanarak 1'den 100'e kadar olan sayılardan sadece çift sayıları bir listeye atmayı yapmaya çalışın.
+
+Try to put only even numbers from 1 to 100 into a list using "list comprehension".
 """
 
-liste = [x for x in range(1, 101) if x % 2 == 0]
-print(liste)
+even = [number for number in range(1, 101) if number % 2 == 0]
+print(even)

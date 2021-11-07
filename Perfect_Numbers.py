@@ -1,24 +1,24 @@
 """
 Problem 1
 
-Kullanıcıdan aldığınız bir sayının mükemmel olup olmadığını bulmaya çalışın.
-Bir sayının kendi hariç bölenlerinin toplamı kendine eşitse bu sayıya "mükemmel sayı" denir.
-Örnek olarak, 6 mükemmel bir sayıdır. (1 + 2 + 3 = 6)
+Try to find out if a number you get from the user is perfect.
+A number is called a "perfect number" if the sum of its divisors is equal to itself.
+For example, 6 is a perfect number. (1 + 2 + 3 = 6)
 """
 while True:
-    toplam = 0
-    sayi = input("Bir Sayi Giriniz:(Cikis Yapmak Icin 'quit' Yaziniz.)")
-    if sayi == 'quit':
-        print("Tekrar Bekleriz...")
+    total = 0
+    number = input("Enter A Number:(Type 'quit' to log out.) ")
+    if number == 'quit':
+        print("We Hope You Come Again...")
         break
     else:
-        sayi = int(sayi)
-        for i in range(1, (sayi // 2) + 1):
-            if sayi % i == 0:
-                toplam += i
+        number = int(number)
+        for i in range(1, (number // 2) + 1):
+            if number % i == 0:
+                total += i
             else:
                 continue
-        if sayi == toplam:
-            print(sayi, "Mukemmel Sayidir...")
+        if number == total:
+            print(number, "Is A Perfect Number.")
         else:
-            print(sayi, "Mukemmel Sayi Degildir...")
+            print(number, "Is Not A Perfect Number.")

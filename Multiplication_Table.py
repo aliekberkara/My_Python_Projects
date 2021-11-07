@@ -1,6 +1,6 @@
 """
 Problem 3
-1'den 10'kadar olan sayılarla ekrana çarpım tablosu bastırmaya çalışın.
+Try to print a multiplication table with numbers from 1 to 10.
 """
 for i in range(1, 11):
     print('*' * 20)

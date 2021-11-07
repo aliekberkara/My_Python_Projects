@@ -1,36 +1,36 @@
 print("""
 ******************************
-Atm Makinesine Hosgeldiniz...
+Welcome to our ATM...
 
-Islemler:
+Operations:
 
-1. Bakiye Sorgulama
+1. Balance Inquiry
 
-2. Para Yatirma
+2. Depositing Money
 
-3. Para Cekme
+3. Withdrawing Money
 
-Programdan Cıkmak Icin 'quit' yazın.
+Type 'quit' to exit the program.
 ******************************
 
 """)
 
-bakiye = 10000
+balance = 10000
 
 while True:
-    islem = input("Islem Giriniz:")
-    if islem == "1":
-        print("Bakiyeniz:", bakiye, "TL")
-    elif islem == "2":
-        miktar = int(input("Yatirmak Istediginiz Miktari Giriniz:"))
-        bakiye += miktar
-        print("Bakiyenize", miktar, "TL Eklenmistir.")
-    elif islem == "3":
-        miktar = int(input("Cekmek Istediginiz Miktari Giriniz:"))
-        bakiye -= miktar
-        print("Bakiyenizden", miktar, "TL Cekilmistir.")
-    elif islem == 'quit':
-        print("Iyi Gunler Dileriz.")
+    operation = input("Enter A Operation: ")
+    if operation == "1":
+        print("Your Balance:", balance, "TL")
+    elif operation == "2":
+        amount = int(input("Enter The Amount Of Money You Want To Deposit: "))
+        balance += amount
+        print(amount, " TL Has Been Added To Your Balance.")
+    elif operation == "3":
+        amount = int(input("Enter The Amount Of Money You Want To Withdraw: "))
+        balance -= amount
+        print(amount, " TL Has Been Withdrawn From Your Balance.")
+    elif operation == 'quit':
+        print("We Wish You A Nice Day.")
         break
     else:
-        print("Gecersiz Islem!")
+        print("Invalid Operation!")

@@ -1,31 +1,31 @@
 '''
-1-100 Arasında Rastgele Üretilecek Bir Sayıyı Aşağı Yukarı İfadeleri İle Bulmaya Çalışın.(Hak = 5)
-** 'random modülü' İçin 'python random' Şeklinde Arama Yapın.
-** 100 Üzerinden Puanlama Yapın. Her Soru 20 Puan.
-** Hak Bilgisini Kullanıcıdan Alınız Ve Her Soru Belirtilen Can Sayısı Üzerinden Hesaplansın.
+Try to Find a Random Number Between 1-100 with Up and Down Expressions.(Right = 5)
+** Search for 'python random' for 'random module'.
+** Score out of 100. 20 Points per Question.
+** Get the Rights Information from the User and Each Question Will Be Calculated Based on the Specified Number of Lives.
 '''
 
 import random
 
-sayi = random.randint(1, 100)
-hak = int(input("Can Sayisini Giriniz:"))
-puan = 100
-can = hak
-while can > 0:
-    print(f"**********************\nCan: {can}\n**********************")
-    tahmin = int(input("Bir Sayi Tahmin Ediniz: "))
+number = random.randint(1, 100)
+right = int(input("Enter Number Of Life: "))
+point = 100
+life = right
+while life > 0:
+    print(f"**********************\nLife: {life}\n**********************")
+    guess = int(input("Guess A Number: "))
     
-    if tahmin == sayi:
-        print(f"**********************\nTebrikler, Sayiyi Bildiniz.\nPuaniniz: {puan}")
+    if guess == number:
+        print(f"**********************\nCongratulations, You Know the Number.\nYour Point: {point}")
         break
-    elif tahmin > sayi:
-        print("**********************\nYanlis Tahmin.\nAsagi")
-        can -= 1
-        puan -= (100 / hak)
+    elif guess > number:
+        print("**********************\nWrong guess.\nDown")
+        life -= 1
+        point -= (100 / right)
     else:
-        print("**********************\nYanlis Tahmin.\nYukari")
-        can -= 1
-        puan -= (100 / hak)
+        print("**********************\nWrong guess.\nUp")
+        life -= 1
+        point -= (100 / right)
 
-if can == 0:
-    print("Caniniz Bitti. Sayi:", sayi)
+if life == 0:
+    print("Your Life Is Over. Number:", number)

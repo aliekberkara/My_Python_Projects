@@ -1,19 +1,18 @@
 # 1,1,2,3,5,8,13,21,34.............
 
 while True:
-    print("----------- Fibonacci Programi -----------\n Cikis Yapmak Icin 'quit' Yaziniz.")
-    sayi = input("Bir Sayi Giriniz:")
+    print("----------- Fibonacci Program -----------\nType 'quit' to exit.")
+    number = input("Enter A Number: ")
     a = 1
     b = 1
 
     fibonacci = [a, b]
-    if sayi == 'quit':
-        print("Tekrar bekleriz...")
+    if number == 'quit':
+        print("We Hope You Come Again...")
         break
     else:
-        sayi = int(sayi)
-        for i in range(sayi - 2):
+        number = int(number)
+        for i in range(number - 2):
             a, b = b, a + b
-            print("a:", a, "b:", b)
             fibonacci.append(b)
         print(*fibonacci)

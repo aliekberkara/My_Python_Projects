@@ -1,35 +1,40 @@
-sayilar = [1, 3, 5, 7, 9, 12, 19, 21] 
+numbers = [1, 3, 5, 7, 9, 12, 19, 21] 
 
-#Soru-1
-# a) Sayılar Listesindeki Hangi Sayılar 3'ün Katıdır?
+#Problem 1
+# a) Which Numbers in the "numbers" List are Multiples of 3?
 
-for kat in sayilar:
-    if kat % 3 == 0:
-        print(kat)
+for multiple in numbers:
+    if multiple % 3 == 0:
+        print(multiple)
+print("------------------------")
 
-# b) Sayılar Listesindeki Sayıların Toplamı Nedir?
+# b) What is the Sum of Numbers in the "numbers" List?
 
-toplam = 0
-for sayi in sayilar:
-    toplam += sayi
-print("Sayilarin Toplami:", toplam)
+total = 0
+for number in numbers:
+    total += number
+print("Sum Of Numbers: ", total)
+print("------------------------")
 
-# c) Sayılar Listesindeki Tek Sayıların Karesini Alınız.
+# c) Square the Odd Numbers in the "numbers" List
 
-for sayi in sayilar:
-    if sayi % 2 == 1:
-        print(f"{sayi} Sayisinin Karesi: {sayi**2}")
+for number in numbers:
+    if number % 2 == 1:
+        print(f"Square Of The Number {number} :  {number**2}")
+print("------------------------")
 
 
-sehirler = ['kocaeli', 'ankara', 'istanbul', 'izmir', 'rize']
+cities = ['kocaeli', 'ankara', 'istanbul', 'izmir', 'rize']
 
-# Soru-2 Şehirlerden Hangileri En Fazla 5 Karakterlidir?
+# Problem 3
+# Which Cities Have Maximum 5 Characters?
 
-for sehir in sehirler:
-    if len(sehir) <= 5:
-        print(sehir)
+for city in cities:
+    if len(city) <= 5:
+        print(city)
+print("------------------------")
 
-urunler = [
+products = [
     {'name' : 'samsung S6', 'price' : '3000'},
     {'name' : 'samsung S7', 'price' : '4000'},
     {'name' : 'samsung S8', 'price' : '5000'},
@@ -38,15 +43,16 @@ urunler = [
 ]
 
 # Soru-3
-# a) Ürünlerin Fiyatları Toplamı Nedir?
+# a) What is the sum of the prices of the products?
 
-fiyat = 0
-for urun in urunler:
-    fiyat += int(urun['price'])
-print("Toplam Fiyatiniz:", fiyat)
+price = 0
+for product in products:
+    price += int(product['price'])
+print("Your Total Price: ", price)
+print("------------------------")
 
-# b) Ürünlerden Fiyatı En Fazla 5000 Olan Ürünleri Gösteriniz.
+# b) Show the products with a maximum price of 5000 TL from the products.
 
-for urun in urunler:
-    if int(urun['price']) <= 5000:
-        print(urun['name'])
+for product in products:
+    if int(product['price']) <= 5000:
+        print(product['name'])
