@@ -1,5 +1,6 @@
-from Cryptodome.Util.number import * # type: ignore
-from pwn import * # type: ignore
+from Cryptodome.Util.number import *
+from pwn import *
+
 def int_to_text():
         
     ords = hex(11515195063862318899931685488813747395775516287289682636499965282714637259206269)
@@ -65,7 +66,7 @@ def hex_to_xor():
 
 
 def byte_xor():
-    xored = "54f6b917616cafd92145a92b64b1fcb27673c5c8eb6be5289aa172196bbeb4334ef05091a1e02ce83878c56e2ced76c1"
+    xored = "73626960647f6b206821204f21254f7d694f7624662065622127234f726927756d"
 
     xored_bytes = hex_to_bytes(xored)
 
